@@ -1,8 +1,120 @@
-header {
-    background-color: lightblue;
-    color: pink;
-    text-align: center;
-    font-size: 50px;
-    height: 150px;
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    max-height: 30vh;
+
+    h2 {
+        padding: 2rem;
+    }
+}
+
+.logo {
+    text-decoration: none;
+    color: #000; 
+}
+
+.search-form {
+    padding: 2rem;
+    display: flex;
+
+   &__input {
+        font-size: 2rem;
+        padding: 0.5em;
+        width: 100%;
+        border: 2px solid rgb(74, 68, 131);
+
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+
+    &__submit {
+        border: none;
+        padding: 0.5rem;
+        font-size: 1rem;
+
+        background-color: rgb(74, 68, 131);
+        color: white;
+
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+
+        cursor: pointer;
+
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: minmax(450px, 1fr);
+    grid-auto-rows: minmax(450px, 1fr);
+
+    row-gap: 5rem;
+    column-gap: 3rem;
+    
+    padding: 2rem 0rem;
+    margin: 0 auto;
+
+    width: 80%;
+    
+
+    &-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: gray;
+
+        padding: 0.5rem 0;
+        a {
+            text-decoration: none;
+            color: gray;
+            font-weight: 900;
+        }
+    }
+
+    &-img{
+        position: relative;
+        overflow: hidden;
+     
+    }
+
+    &-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.nav-button {
+    min-height: 30vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__more {
+        padding: 1rem 3rem;
+
+        background-color: rgb(74, 68, 131);
+        color: white;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-radius: 0.5rem;
+
+    }
+}
+
